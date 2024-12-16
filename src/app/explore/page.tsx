@@ -11,7 +11,7 @@ type Session = {
 
 async function getHostels() {
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"; // Default to localhost for dev
+    process.env.NEXT_PUBLIC_BASE_URL || "https://dhanu-globehostel-booking-platform.vercel.app/"; // Default to localhost for dev
   const res = await fetch(`${baseUrl}/api/allhostels`, { cache: "no-store" });
   if (!res.ok) {
     throw new Error("Failed to fetch hostels");
